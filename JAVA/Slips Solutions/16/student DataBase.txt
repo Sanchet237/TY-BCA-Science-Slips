@@ -1,0 +1,19 @@
+sudo -i -u postgres
+mit@2025
+plsql
+
+CREATE DATABASE SanchetDB;
+
+\c SanchetDB
+
+CREATE TABLE Course (
+    code SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    number_of_students INTEGER
+);
+
+INSERT INTO Course (name, department, number_of_students) VALUES
+('BCA Science', 'Science', 500),
+('BBA Management', 'Management', 300),
+('BCom', 'Commerce', 400);

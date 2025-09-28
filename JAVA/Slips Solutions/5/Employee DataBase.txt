@@ -1,0 +1,11 @@
+sudo -i -u postgres
+mit@2025
+plsql
+
+CREATE DATABASE SanchetDB;
+
+\c SanchetDB
+
+CREATE TABLE Employee (ID INT PRIMARY KEY,name VARCHAR(50),salary DECIMAL(10,2));
+
+SELECT * FROM Employee;

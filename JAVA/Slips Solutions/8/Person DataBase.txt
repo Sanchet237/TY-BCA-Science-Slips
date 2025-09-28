@@ -1,0 +1,21 @@
+sudo -i -u postgres
+mit@2025
+plsql
+
+CREATE DATABASE SanchetDB;
+
+\c SanchetDB
+
+CREATE TABLE Person (PID INT PRIMARY KEY,name VARCHAR(50),gender VARCHAR(10),birth_year INT);
+
+INSERT INTO Person (PID, name, gender, birth_year)VALUES 
+    (1, 'Sanchet Kolekar', 'Male', 2003),
+    (2, 'Saurabh', 'Female', 2004),
+    (3, 'Amit Sharma', 'Male', 2002),
+    (4, 'Priya Singh', 'Female', 2003),
+    (5, 'Rohit Gupta', 'Male', 2001),
+    (6, 'Neha Verma', 'Female', 2005);
+
+
+SELECT * FROM Person;
+
