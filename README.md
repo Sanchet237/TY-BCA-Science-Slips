@@ -1,6 +1,12 @@
 
 
  <h1 align="center">🎓 TY BCA Science - Practical Slips Hub </h1> 
+ 
+<p align="center">
+  🔗 <a href="https://ty-bcascience.netlify.app" target="_blank">
+    <b>https://ty-bcascience.netlify.app</b>
+  </a>
+</p>
 
 <p align="center">
     <b><i>⭐ If you find this repository useful, don’t forget to star it! ⭐</i></b>
