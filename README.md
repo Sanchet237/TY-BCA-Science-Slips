@@ -1,6 +1,6 @@
 
 
- <h1 align="center">🚀 TY BCA Science - Practical Slips Hub </h1> 
+ <h1 align="center">🎓 TY BCA Science - Practical Slips Hub </h1> 
 
 <p align="center">
     <b><i>⭐ If you find this repository useful, don’t forget to star it! ⭐</i></b>
