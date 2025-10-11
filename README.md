@@ -1,15 +1,16 @@
+<p align="center">
+    <b><i>⭐ If you find this repository useful, don’t forget to star it! ⭐</i></b>
+</p>
 
-
- <h1 align="center">🎓 TY BCA Science - Practical Slips Hub </h1> 
- 
+<p align="center">
+  <a href="https://ty-bcascience.netlify.app" target="_blank">
+    <img src="https://raw.githubusercontent.com/Sanchet237/TY-BCA-Science-Slips/main/WebApp.png" alt="TY BCA Science Practical Slips Hub Preview" width="800"/>
+  </a>
+</p>
 <p align="center">
   🔗 <a href="https://ty-bcascience.netlify.app" target="_blank">
     <b>https://ty-bcascience.netlify.app</b>
   </a>
-</p>
-
-<p align="center">
-    <b><i>⭐ If you find this repository useful, don’t forget to star it! ⭐</i></b>
 </p>
 
 A complete, student-friendly collection of Third Year BCA (Science) practical exam slip solutions. Solve, practice, and revise efficiently with ready-to-use code, datasets, mini-projects, and curated reference books.
@@ -76,9 +77,21 @@ All materials are provided for **educational and revision purposes only**. Copyr
 ## 📬 Contact / Contributions
 
 - Open an **issue** for clarifications, corrections, or suggestions.  
-- **Contribute** by adding missing slip solutions, datasets, or mini-projects.  
+- **Contribute** by adding missing slip solutions, datasets, or mini-projects.
+  
 
 > **Remember:** Practical skills improve fastest through hands-on practice. This repository is your **learning companion**, not a shortcut.
 
 ---
+<p align="center">
+  <a href="https://github.com/Sanchet237" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Sanchet237-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+  <a href="https://www.linkedin.com/in/sanchet-kolekar" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-sanchet--kolekar-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
+  </a>
+  <a href="https://www.instagram.com/sanchetkolekar" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-sanchetkolekar-E4405F?style=for-the-badge&logo=instagram" alt="Instagram"/>
+  </a>
+</p>
 
