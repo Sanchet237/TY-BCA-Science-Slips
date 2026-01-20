@@ -21,7 +21,7 @@ A complete, student-friendly collection of Third Year BCA (Science) practical ex
 
 - ⚡ **Quick Revision** – Review practical concepts efficiently before exams.  
 - 🧩 **Solved Slips** – Validate your approach and learn problem-solving logic.  
-- 💻 **Hands-on Practice** – Includes Java, R, and Python, C practical exercises.  
+- 💻 **Hands-on Practice** – Includes Java, R, Python and Go practical exercises.  
 - 📚 **Reference Material** – Access Nirali PDFs and textbooks for deeper understanding.  
 
 > **Pro Tip:** Attempt each slip yourself first. Solutions are meant to **validate your learning**, not replace practice.
@@ -37,6 +37,9 @@ TY-BCA-Science-Slips/
 │   └── Slips Solutions/
 │       ├── Slip_01.ipynb ... Slip_20.ipynb
 │       └── DataSets/           # CSVs & example datasets
+├── GO Programming/
+│   ├── Lab Assignments/        # Assignments 1..6
+│   └── Slips Solution/         # Folders 1..20
 ├── JAVA/
 │   ├── *.pdf                   # Lab manuals, question banks
 │   ├── Activity Mini Projects/ # Independent Java programs
