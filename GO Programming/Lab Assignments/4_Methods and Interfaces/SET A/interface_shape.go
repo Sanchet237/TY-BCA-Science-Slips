@@ -38,8 +38,14 @@ func (r Rectangle) perimeter() float64 {
 }
 
 func main() {
-	c := Circle{5}
-	r := Rectangle{4, 6}
+	var radius, length, breadth float64
+	fmt.Print("Enter circle radius: ")
+	fmt.Scan(&radius)
+	fmt.Print("Enter rectangle length and breadth: ")
+	fmt.Scan(&length, &breadth)
+
+	c := Circle{radius}
+	r := Rectangle{length, breadth}
 
 	fmt.Println("Circle Area:", c.area())
 	fmt.Println("Circle Perimeter:", c.perimeter())

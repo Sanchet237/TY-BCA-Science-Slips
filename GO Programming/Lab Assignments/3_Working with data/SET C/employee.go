@@ -12,10 +12,12 @@ type Emp struct {
 
 func main() {
 	var n int
+	fmt.Print("Enter number of employees: ")
 	fmt.Scan(&n)
 
 	emps := make([]Emp, n)
 	for i := 0; i < n; i++ {
+		fmt.Printf("Enter employee %d details (no name salary): ", i+1)
 		fmt.Scan(&emps[i].no, &emps[i].name, &emps[i].sal)
 	}
 
@@ -26,5 +28,5 @@ func main() {
 		}
 	}
 
-	fmt.Println(max.no, max.name, max.sal)
+	fmt.Printf("Employee with max salary -> No:%d Name:%s Salary:%d\n", max.no, max.name, max.sal)
 }

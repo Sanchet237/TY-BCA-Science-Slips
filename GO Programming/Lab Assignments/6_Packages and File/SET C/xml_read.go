@@ -14,8 +14,15 @@ type Student struct {
 }
 
 func main() {
-	data, _ := os.ReadFile("student.xml")
+	data, err := os.ReadFile("student.xml")
+	if err != nil {
+		fmt.Println("Error reading XML file:", err)
+		return
+	}
 	var s Student
-	xml.Unmarshal(data, &s)
-	fmt.Println(s)
+	if err := xml.Unmarshal(data, &s); err != nil {
+		fmt.Println("Error parsing XML:", err)
+		return
+	}
+	fmt.Printf("Student -> Name:%s Age:%d\n", s.Name, s.Age)
 }

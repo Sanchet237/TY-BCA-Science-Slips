@@ -11,6 +11,7 @@ func main() {
 
 	arr := make([]int, n)
 	for i := 0; i < n; i++ {
+		fmt.Printf("Enter element %d: ", i+1)
 		fmt.Scan(&arr[i])
 	}
 
@@ -24,6 +25,6 @@ func main() {
 		}
 	}
 
-	fmt.Println("Largest:", max)
-	fmt.Println("Smallest:", min)
+	fmt.Println("Largest element:", max)
+	fmt.Println("Smallest element:", min)
 }

@@ -14,10 +14,15 @@ func fib(ch chan int, n int) {
 }
 
 func main() {
+	var n int
+	fmt.Print("Enter count for Fibonacci series: ")
+	fmt.Scan(&n)
+
 	ch := make(chan int)
-	go fib(ch, 10)
+	go fib(ch, n)
 
 	for v := range ch {
 		fmt.Print(v, " ")
 	}
+	fmt.Println()
 }

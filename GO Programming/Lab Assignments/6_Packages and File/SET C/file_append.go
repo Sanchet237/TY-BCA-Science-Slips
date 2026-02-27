@@ -2,10 +2,23 @@
 
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	file, _ := os.OpenFile("test.txt", os.O_APPEND|os.O_WRONLY, 0644)
-	file.WriteString("\nAppended Content")
-	file.Close()
+	file, err := os.OpenFile("test.txt", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
+	if err != nil {
+		fmt.Println("Error opening file:", err)
+		return
+	}
+	defer file.Close()
+
+	if _, err := file.WriteString("\nAppended Content"); err != nil {
+		fmt.Println("Error writing to file:", err)
+		return
+	}
+
+	fmt.Println("Content appended successfully to test.txt")
 }

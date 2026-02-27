@@ -8,5 +8,8 @@ import (
 )
 
 func main() {
-	fmt.Println("Area of Rectangle:", area.Rectangle(5, 4))
+	var l, b int
+	fmt.Print("Enter length and breadth of rectangle: ")
+	fmt.Scan(&l, &b)
+	fmt.Println("Area of Rectangle:", area.Rectangle(l, b))
 }

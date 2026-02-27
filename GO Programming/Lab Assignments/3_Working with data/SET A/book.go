@@ -19,10 +19,11 @@ func main() {
 	books := make([]Book, n)
 
 	for i := 0; i < n; i++ {
+		fmt.Printf("Enter book %d details (id title author price): ", i+1)
 		fmt.Scan(&books[i].id, &books[i].title, &books[i].author, &books[i].price)
 	}
 
 	for _, b := range books {
-		fmt.Println(b.id, b.title, b.author, b.price)
+		fmt.Printf("Book -> ID:%d Title:%s Author:%s Price:%.2f\n", b.id, b.title, b.author, b.price)
 	}
 }

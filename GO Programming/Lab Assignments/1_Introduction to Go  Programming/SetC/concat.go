@@ -8,5 +8,5 @@ func main() {
 	fmt.Scan(&a, &b)
 	pa := &a
 	pb := &b
-	fmt.Println(*pa + *pb)
+	fmt.Println("Concatenated string:", *pa+*pb)
 }

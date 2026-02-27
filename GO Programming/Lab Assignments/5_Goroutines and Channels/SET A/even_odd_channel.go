@@ -17,7 +17,15 @@ func odd(ch chan int) {
 }
 
 func main() {
-	nums := []int{1, 2, 3, 4, 5, 6}
+	var n int
+	fmt.Print("How many numbers? ")
+	fmt.Scan(&n)
+
+	nums := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Printf("Enter number %d: ", i+1)
+		fmt.Scan(&nums[i])
+	}
 	evenCh := make(chan int)
 	oddCh := make(chan int)
 

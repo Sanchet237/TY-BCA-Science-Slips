@@ -16,6 +16,8 @@ func (s *Student) show() {
 }
 
 func main() {
-	s := Student{1, "Amit"}
+	var s Student
+	fmt.Print("Enter student roll and name: ")
+	fmt.Scan(&s.roll, &s.name)
 	s.show()
 }

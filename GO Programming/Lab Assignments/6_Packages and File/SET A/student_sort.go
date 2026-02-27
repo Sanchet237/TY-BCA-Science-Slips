@@ -13,10 +13,14 @@ type Student struct {
 }
 
 func main() {
-	students := []Student{
-		{"Amit", 78},
-		{"Riya", 92},
-		{"Sonal", 85},
+	var n int
+	fmt.Print("Enter number of students: ")
+	fmt.Scan(&n)
+
+	students := make([]Student, n)
+	for i := 0; i < n; i++ {
+		fmt.Printf("Enter student %d name and marks: ", i+1)
+		fmt.Scan(&students[i].name, &students[i].marks)
 	}
 
 	sort.Slice(students, func(i, j int) bool {
@@ -24,6 +28,6 @@ func main() {
 	})
 
 	for _, s := range students {
-		fmt.Println(s.name, s.marks)
+		fmt.Printf("Name:%s Marks:%d\n", s.name, s.marks)
 	}
 }

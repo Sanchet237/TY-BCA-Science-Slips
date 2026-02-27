@@ -8,8 +8,8 @@ func main() {
 	fmt.Scan(&a, &b)
 
 	if a == b {
-		fmt.Println("Equal")
+		fmt.Println("Strings are equal")
 	} else {
-		fmt.Println("Not Equal")
+		fmt.Println("Strings are not equal")
 	}
 }

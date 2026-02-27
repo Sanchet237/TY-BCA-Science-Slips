@@ -7,6 +7,7 @@ func main() {
 	var roll int = 23
 	var division string = "A"
 	var college string = "MIT ACSC Pune"
+	fmt.Println("Student Information")
 	fmt.Println("Name:", name)
 	fmt.Println("Roll No:", roll)
 	fmt.Println("Division:", division)

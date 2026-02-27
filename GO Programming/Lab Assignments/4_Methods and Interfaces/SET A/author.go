@@ -15,6 +15,10 @@ func (a Author) show() {
 }
 
 func main() {
-	a := Author{"Chetan", "Go Basics"}
+	var a Author
+	fmt.Print("Enter author name: ")
+	fmt.Scan(&a.name)
+	fmt.Print("Enter book title: ")
+	fmt.Scan(&a.book)
 	a.show()
 }

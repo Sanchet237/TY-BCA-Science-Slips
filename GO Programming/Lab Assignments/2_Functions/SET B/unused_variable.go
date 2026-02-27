@@ -2,6 +2,9 @@
 
 package main
 
+import "fmt"
+
 func main() {
 	var x int
+	fmt.Println("Declared variable x to avoid unused error. Value:", x)
 }
