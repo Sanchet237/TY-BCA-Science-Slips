@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">spinnerstyle</string>
+    <string-array name="coffee_array">
+        <item>Filter</item>
+        <item>Americano</item>
+        <item>Latte</item>
+        <item>Espresso</item>
+        <item>Cappuccino</item>
+        <item>Mocha</item>
+        <item>Skinny Latte</item>
+        <item>Espresso Corretto</item>
+    </string-array>
+</resources>
