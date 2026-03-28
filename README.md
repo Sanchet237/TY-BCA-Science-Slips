@@ -47,6 +47,13 @@ TY-BCA-Science-Slips/
 ├── Operating System/
 │   ├── *.pdf                   # Lab manuals, question banks
 │   └── Slips Solutions/        # Folders 1..20
+├── Android Programming/
+│   ├── AP Slips Solutions/
+│   ├── Assignment/
+│   ├── AP Practical Slips Solution.pdf
+│   ├── Android Practical Slips.pdf
+│   ├── BCA – 366 DSE IV Laboratory (Android Programming).pdf
+│   └── Wrox Beginning Android Application Development Mar 2011.pdf
 ├── Nirali Books/               # Reference textbooks & PDFs
 └── .gitattributes
 ```
