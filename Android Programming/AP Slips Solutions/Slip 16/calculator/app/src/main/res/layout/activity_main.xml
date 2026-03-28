@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Display -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:gravity="end|center_vertical"
+        android:text="0"
+        android:textSize="32sp"
+        android:background="#E0E0E0"
+        android:padding="10dp"/>
+
+    <!-- Buttons Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:layout_marginTop="10dp">
+
+        <!-- Row 1 -->
+        <Button android:text="AC" android:onClick="onButtonClick"/>
+        <Button android:text="+/-" android:onClick="onButtonClick"/>
+        <Button android:text="/" android:onClick="onButtonClick"/>
+        <Button android:text="*" android:onClick="onButtonClick"/>
+
+        <!-- Row 2 -->
+        <Button android:text="7" android:onClick="onButtonClick"/>
+        <Button android:text="8" android:onClick="onButtonClick"/>
+        <Button android:text="9" android:onClick="onButtonClick"/>
+        <Button android:text="-" android:onClick="onButtonClick"/>
+
+        <!-- Row 3 -->
+        <Button android:text="4" android:onClick="onButtonClick"/>
+        <Button android:text="5" android:onClick="onButtonClick"/>
+        <Button android:text="6" android:onClick="onButtonClick"/>
+        <Button android:text="+" android:onClick="onButtonClick"/>
+
+        <!-- Row 4 -->
+        <Button android:text="1" android:onClick="onButtonClick"/>
+        <Button android:text="2" android:onClick="onButtonClick"/>
+        <Button android:text="3" android:onClick="onButtonClick"/>
+        <Button android:text="%" android:onClick="onButtonClick"/>
+
+        <!-- Row 5 -->
+        <Button android:text="0" android:onClick="onButtonClick"/>
+        <Button android:text="." android:onClick="onButtonClick"/>
+        <Button android:text="=" android:onClick="onButtonClick"/>
+    </GridLayout>
+
+</LinearLayout>

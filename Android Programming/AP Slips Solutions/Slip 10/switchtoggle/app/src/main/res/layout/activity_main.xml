@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch and Toggle Demo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="20dp"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:text="Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ToggleButton
+        android:id="@+id/toggle1"
+        android:textOn="Toggle ON"
+        android:textOff="Toggle OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result will appear here"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

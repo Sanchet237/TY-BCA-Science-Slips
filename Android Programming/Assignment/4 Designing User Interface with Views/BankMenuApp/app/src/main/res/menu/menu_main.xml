@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/withdraw"
+        android:title="Withdraw"/>
+
+    <item
+        android:id="@+id/deposit"
+        android:title="Deposit"/>
+
+    <item
+        android:id="@+id/balance"
+        android:title="Check Balance"/>
+
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"/>
+
+</menu>

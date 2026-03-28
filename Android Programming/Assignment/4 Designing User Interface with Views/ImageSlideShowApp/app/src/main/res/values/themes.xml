@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.ImageSlideShowApp" parent="Theme.Material3.DayNight">
+    </style>
+
+    <!-- App theme -->
+    <style name="Theme.ImageSlideShowApp" parent="Base.Theme.ImageSlideShowApp">
+    </style>
+
+</resources>
