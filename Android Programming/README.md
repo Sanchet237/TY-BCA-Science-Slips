@@ -1,6 +1,22 @@
-# 📱 Android Programming Slips
+<h1 align="center">
+  <img src="https://developer.android.com/images/logos/android-studio.svg" width="40" />
+  Android Programming Slips <img src="https://developer.android.com/images/logos/android-studio.svg" width="40" />
+</h1>
 
-> Complete solution set for Android Programming practical slips (Slip 01 – Slip 20)
+<p align="center">
+  <b>Savitribai Phule Pune University</b><br>
+  T.Y. B.C.A. (Science) – Semester VI<br>
+  Practical Examination<br>
+  <b>BCA 366: DSE IV Lab (Android Programming)</b>
+</p>
+
+<p align="center" style="white-space: nowrap;">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="25" style="vertical-align:middle;"/> Java
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" width="25" style="vertical-align:middle;"/> XML
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="25" style="vertical-align:middle;"/> SQLite
+</p>
 
 ---
 
