@@ -1,12 +1,16 @@
-<h1 align="center">
+<h1 align="center"><strong>
   <img src="https://developer.android.com/images/logos/android-studio.svg" width="40" />
-  Android Programming Slips <img src="https://developer.android.com/images/logos/android-studio.svg" width="40" />
+  Android Programming Slips <img src="https://developer.android.com/images/logos/android-studio.svg" width="40" /></strong>
 </h1>
 
-<p align="center">
-  <b>Savitribai Phule Pune University</b><br>
-  T.Y. B.C.A. (Science) – Semester VI<br>
-  Practical Examination<br>
+
+  <h3 align="center"><b>Savitribai Phule Pune University</b></h3>
+  <div align="center" style="margin: 15px 0;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Savitribai_Phule_Pune_University_Logo.png" width="90" alt="SPPU Logo" />
+  </div>
+ <p align="center">
+  T.Y. B.C.A. (Science) <br>
+  Semester VI - Practical Examination<br>
   <b>BCA 366: DSE IV Lab (Android Programming)</b>
 </p>
 
@@ -17,6 +21,7 @@
   &nbsp;&nbsp;•&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="25" style="vertical-align:middle;"/> SQLite
 </p>
+
 
 ---
 
@@ -49,7 +54,8 @@
 
 ---
 
-## Slip 01
+<h2 align="center" id="slip-01"><b> Slip 01 </b></h2>
+
 
 ### Q1. Create a Simple Application which shows the Life Cycle of Activity. [10 Marks]
 
@@ -60,23 +66,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center">
 
     <TextView
-        android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Activity Lifecycle Demo"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/btnNextActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next Activity"
-        android:layout_marginTop="16dp" />
-
+        android:textSize="18sp"/>
 </LinearLayout>
 ```
 
@@ -86,51 +82,35 @@
 package com.example.lifecycledemo;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvStatus;
     String TAG = "Lifecycle";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        tvStatus = findViewById(R.id.tvStatus);
-        Button btn = findViewById(R.id.btnNextActivity);
-
-        tvStatus.setText("onCreate()");
         Log.d(TAG, "onCreate()");
-
-        btn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, SecondActivity.class));
-        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        tvStatus.setText("onStart()");
         Log.d(TAG, "onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        tvStatus.setText("onResume()");
         Log.d(TAG, "onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        tvStatus.setText("onPause()");
         Log.d(TAG, "onPause()");
     }
 
@@ -143,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        tvStatus.setText("onRestart()");
         Log.d(TAG, "onRestart()");
     }
 
@@ -154,22 +133,8 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-
-#### ➕ `SecondActivity.java` & `activity_second.xml`
-
-```xml
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Second Activity"
-    android:textSize="18sp"/>
-```
-
-#### 📄 `AndroidManifest.xml` (addition)
-
-```xml
-<activity android:name=".SecondActivity"/>
-```
+#### 😸 `LogCat`
+```Go to LogCat icon at Left Side Panel -> Select "Lifecycle" from dropdown -> Observe the logs when you run the app and perform actions like home button, back button, etc.```
 
 ---
 
@@ -258,9 +223,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 02
+<h2 align="center" id="slip-02"><b> Slip 02 </b></h2>
 
 ### Q1. Create a Simple Application, which reads a positive number from the user and display its factorial value in another activity. [10 Marks]
 
@@ -361,17 +324,53 @@ public class SecondActivity extends AppCompatActivity {
 #### 📱 `activity_second.xml`
 
 ```xml
-<TextView
-    android:id="@+id/tvResult"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="18sp"/>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="8dp"/>
+
+</LinearLayout>    
 ```
 
 #### 📄 `AndroidManifest.xml` (addition)
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
@@ -432,18 +431,39 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 #### 📄 `AndroidManifest.xml` (addition)
 
 ```xml
-<uses-permission android:name="android.permission.INTERNET"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.slips">
 
-<meta-data
-    android:name="com.google.android.geo.API_KEY"
-    android:value="YOUR_API_KEY"/>
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="Slips"
+        android:theme="@style/Theme.Slips">
+
+        <!-- Main Activity -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Google Map API -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY"/>
+
+    </application>
+
+</manifest>
 ```
 
 ---
 
----
-
-## Slip 03
+<h2 align="center" id="slip-03"><b> Slip 03 </b></h2>
 
 ### Q1. Create an Android Application that will change color of the College Name on click of Push Button and change the font size, font style of text view using xml. [10 Marks]
 
@@ -586,9 +606,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 04
+<h2 align="center" id="slip-04"><b> Slip 04 </b></h2>
 
 ### Q1. Create a Simple Application, that performs Arithmetic Operations. (Use constraint layout) [10 Marks]
 
@@ -740,13 +758,15 @@ public class MainActivity extends AppCompatActivity {
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <Button
         android:id="@+id/btnNotify"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send Notification" />
+        android:text="Send Notification"
+        android:padding="8dp" />
 
 </LinearLayout>
 ```
@@ -822,13 +842,15 @@ public class MainActivity extends AppCompatActivity {
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:padding="8dp" />
 
 </LinearLayout>
 ```
@@ -857,17 +879,40 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
 
----
-
-## Slip 05
+<h2 align="center" id="slip-05"><b> Slip 05 </b></h2>
 
 ### Q1. Create an Android Application to accept two numbers and find power and Average. Display the result on the next activity on Button click. [10 Marks]
 
@@ -883,25 +928,28 @@ public class SecondActivity extends AppCompatActivity {
 
     <EditText
         android:id="@+id/et1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter first number"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:padding="8dp"/>
 
     <EditText
         android:id="@+id/et2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter second number"
         android:inputType="number"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/btnResult"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calculate"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
 
 </LinearLayout>
 ```
@@ -993,10 +1041,35 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
@@ -1117,7 +1190,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
-## Slip 06
+<h2 align="center" id="slip-06"><b> Slip 06 </b></h2>
 
 ### Q1. Create a Simple Application Which Send "Hello!" message from one activity to another with help of Button (Use Intent). [10 Marks]
 
@@ -1211,10 +1284,35 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
@@ -1282,7 +1380,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
-## Slip 07
+<h2 align="center" id="slip-07"><b> Slip 07 </b></h2>
 
 ### Q1. Create an Android Application that Demonstrate Radio Button. [10 Marks]
 
@@ -1439,9 +1537,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 08
+<h2 align="center" id="slip-08"><b> Slip 08 </b></h2>
 
 ### Q1. Create an Android App with Login Screen. On successful login, gives message go to next Activity (Without Using Database & use Table Layout). [10 Marks]
 
@@ -1455,28 +1551,54 @@ public class MainActivity extends AppCompatActivity {
     android:stretchColumns="1"
     android:padding="16dp">
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
         <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:text="Username:" />
         <EditText
             android:id="@+id/etUser"
-            android:hint="Enter Username" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Username"
+            android:padding="8dp" />
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
         <TextView
+            android:id="@+id/tvPass"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:text="Password:" />
         <EditText
             android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Enter Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="8dp" />
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
         <Button
             android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_span="2"
-            android:text="Login" />
+            android:text="Login"
+            android:padding="8dp" />
     </TableRow>
 
 </TableLayout>
@@ -1556,10 +1678,35 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
@@ -1630,7 +1777,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
-## Slip 09
+<h2 align="center" id="slip-09"><b> Slip 09 </b></h2>
 
 ### Q1. Write an Android application to accept two numbers from the user, and display them, but reject input if both numbers are greater than 10 and asks for two new numbers. [10 Marks]
 
@@ -1732,24 +1879,59 @@ public class MainActivity extends AppCompatActivity {
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText android:id="@+id/etId" android:hint="ID"/>
-    <EditText android:id="@+id/etName" android:hint="Name"/>
-    <EditText android:id="@+id/etAddress" android:hint="Address"/>
-    <EditText android:id="@+id/etPhone" android:hint="Phone"/>
+    <EditText 
+        android:id="@+id/etId" 
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:padding="8dp"/>
+
+    <EditText 
+        android:id="@+id/etName" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etAddress" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etPhone" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/btnInsert"
-        android:text="Insert"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Show All"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:padding="8dp"/>
 
     <TextView
         android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:padding="8dp"/>
 </LinearLayout>
 ```
 
@@ -1851,9 +2033,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 10
+<h2 align="center" id="slip-10"><b> Slip 10 </b></h2>
 
 ### Q1. Create an Android Application that Demonstrate Switch and Toggle Button. [10 Marks]
 
@@ -1991,9 +2171,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 11
+<h2 align="center" id="slip-11"><b> Slip 11 </b></h2>
 
 ### Q1. Create android application to change Font Size, Color and Font Family of String. [10 Marks]
 
@@ -2077,17 +2255,57 @@ public class MainActivity extends AppCompatActivity {
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText android:id="@+id/etFName" android:hint="First Name"/>
-    <EditText android:id="@+id/etMName" android:hint="Middle Name"/>
-    <EditText android:id="@+id/etLName" android:hint="Last Name"/>
-    <EditText android:id="@+id/etDOB" android:hint="Date of Birth"/>
-    <EditText android:id="@+id/etAddress" android:hint="Address"/>
-    <EditText android:id="@+id/etEmail" android:hint="Email ID"/>
+    <EditText 
+        android:id="@+id/etFName" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+
+    <EditText 
+        android:id="@+id/etMName" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Middle Name"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etLName" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etDOB" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etAddress" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etEmail" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email ID"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Submit"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
 
 </LinearLayout>
 </ScrollView>
@@ -2150,7 +2368,10 @@ public class MainActivity extends AppCompatActivity {
 
     <TextView
         android:id="@+id/tvResult"
-        android:textSize="16sp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp"/>
 
 </LinearLayout>
 ```
@@ -2186,17 +2407,40 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
 
----
-
-## Slip 12
+<h2 align="center" id="slip-12"><b> Slip 12 </b></h2>
 
 ### Q1. Create a Simple Application Which Send "Hi" message from one activity to another with help of Button (Use Intent). [10 Marks]
 
@@ -2288,10 +2532,35 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
@@ -2394,9 +2663,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 13
+<h2 align="center" id="slip-13"><b> Slip 13 </b></h2>
 
 ### Q1. Create following Vertical Scroll View Creation in Android (Button 1 to Button 10). [10 Marks]
 
@@ -2413,16 +2680,58 @@ public class MainActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 1"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 2"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 3"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 4"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 5"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 6"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 7"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 8"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 9"/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Button 10"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 1"
+            android:layout_margin="4dp"/>
+
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 2"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 3"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 4"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 5"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 6"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 7"
+            android:layout_margin="4dp"/>
+
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 8"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 9"
+            android:layout_margin="4dp"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button 10"
+            android:layout_margin="4dp"/>
 
     </LinearLayout>
 </ScrollView>
@@ -2461,17 +2770,26 @@ public class MainActivity extends AppCompatActivity {
 
     <EditText
         android:id="@+id/etTeacher"
-        android:hint="Enter Teacher Name"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Teacher Name"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Show Students"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:padding="8dp"/>
 
     <TextView
         android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:padding="8dp"/>
 </LinearLayout>
 ```
 
@@ -2566,9 +2884,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 14
+<h2 align="center" id="slip-14"><b> Slip 14 </b></h2>
 
 ### Q1. Create a Simple Application which shows Life Cycle of Activity {Use log}. [10 Marks]
 
@@ -2646,6 +2962,8 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+#### 😸 `LogCat`
+```Go to LogCat icon at Left Side Panel -> Select "Lifecycle" from dropdown -> Observe the logs when you run the app and perform actions like home button, back button, etc.```
 
 ---
 
@@ -2712,9 +3030,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 15
+<h2 align="center" id="slip-15"><b> Slip 15 </b></h2>
 
 ### Q1. Design following - add a border to an Android Layout. [10 Marks]
 
@@ -2891,17 +3207,40 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
 
----
-
-## Slip 16
+<h2 align="center" id="slip-16"><b> Slip 16 </b></h2>
 
 ### Q1. Create an Android App, it reads the Students Details and display all information in another activity in table format on click of Submit button. [10 Marks]
 
@@ -2919,25 +3258,79 @@ public class SecondActivity extends AppCompatActivity {
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText android:id="@+id/etName" android:hint="Name"/>
-    <EditText android:id="@+id/etSurname" android:hint="Surname"/>
-    <EditText android:id="@+id/etClass" android:hint="Class"/>
-    <EditText android:id="@+id/etMarks" android:hint="Marks"/>
+    <EditText 
+        android:id="@+id/etName" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+
+    <EditText 
+        android:id="@+id/etSurname" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Surname"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etClass" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Class"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+    <EditText 
+        android:id="@+id/etMarks" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marks"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
 
     <!-- Gender -->
-    <RadioGroup android:id="@+id/rgGender">
-        <RadioButton android:id="@+id/rbMale" android:text="Male"/>
-        <RadioButton android:id="@+id/rbFemale" android:text="Female"/>
+    <RadioGroup 
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <RadioButton 
+            android:id="@+id/rbMale" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:padding="4dp"/>
+        <RadioButton 
+            android:id="@+id/rbFemale" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:padding="4dp"/>
     </RadioGroup>
 
     <!-- Hobbies -->
-    <CheckBox android:id="@+id/cbSports" android:text="Sports"/>
-    <CheckBox android:id="@+id/cbMusic" android:text="Music"/>
+    <CheckBox 
+        android:id="@+id/cbSports" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sports"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"/>
+    <CheckBox 
+        android:id="@+id/cbMusic" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"/>
 
     <Button
         android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Submit"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
 
 </LinearLayout>
 </ScrollView>
@@ -3006,33 +3399,69 @@ public class MainActivity extends AppCompatActivity {
     android:padding="16dp">
 
     <TableRow>
-        <TextView android:text="Name:"/>
-        <TextView android:id="@+id/tvName"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"/>
+        <TextView 
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Surname:"/>
-        <TextView android:id="@+id/tvSurname"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surname:"/>
+        <TextView 
+            android:id="@+id/tvSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Class:"/>
-        <TextView android:id="@+id/tvClass"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class:"/>
+        <TextView 
+            android:id="@+id/tvClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Gender:"/>
-        <TextView android:id="@+id/tvGender"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"/>
+        <TextView 
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Hobbies:"/>
-        <TextView android:id="@+id/tvHobbies"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobbies:"/>
+        <TextView 
+            android:id="@+id/tvHobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Marks:"/>
-        <TextView android:id="@+id/tvMarks"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marks:"/>
+        <TextView 
+            android:id="@+id/tvMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
 </TableLayout>
@@ -3064,10 +3493,35 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
@@ -3151,7 +3605,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
-## Slip 17
+<h2 align="center" id="slip-17"><b> Slip 17 </b></h2>
 
 ### Q1. Write an android code to make phone call using Intent. [10 Marks]
 
@@ -3389,9 +3843,7 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
----
-
-## Slip 18
+<h2 align="center" id="slip-18"><b> Slip 18 </b></h2>
 
 ### Q1. Create an Android Application that Demonstrate Alert Dialog Box. [10 Marks]
 
@@ -3473,11 +3925,15 @@ public class MainActivity extends AppCompatActivity {
 
     <EditText
         android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:hint="Enter first number"
         android:inputType="number"/>
 
     <EditText
         android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:hint="Enter second number"
         android:inputType="number"
         android:layout_marginTop="10dp"/>
@@ -3555,6 +4011,8 @@ public class MainActivity extends AppCompatActivity {
 
     <TextView
         android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="20sp"/>
 </LinearLayout>
 ```
@@ -3583,17 +4041,40 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
 
----
-
-## Slip 19
+<h2 align="center" id="slip-19"><b> Slip 19 </b></h2>
 
 ### Q1. Create an Android Application that on/off the bulb using Toggle Button. [10 Marks]
 
@@ -3676,57 +4157,128 @@ public class MainActivity extends AppCompatActivity {
     android:padding="16dp">
 
     <TableRow>
-        <TextView android:text="Full Name"/>
-        <EditText android:id="@+id/etName"/>
+        <TextView 
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"/>
+
+        <EditText 
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Gender"/>
-        <RadioGroup android:id="@+id/rgGender">
-            <RadioButton android:id="@+id/rbMale" android:text="Male"/>
-            <RadioButton android:id="@+id/rbFemale" android:text="Female"/>
+        <TextView 
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"/>
+
+        <RadioGroup 
+            android:id="@+id/rgGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton 
+                android:id="@+id/rbMale" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"/>
+            <RadioButton 
+                android:id="@+id/rbFemale" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"/>
         </RadioGroup>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Current Weight"/>
-        <EditText android:id="@+id/etCWeight"/>
+        <TextView 
+            android:id="@+id/tvCWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Weight"/>
+        <EditText 
+            android:id="@+id/etCWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Height"/>
-        <EditText android:id="@+id/etHeight"/>
+        <TextView 
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height"/>
+        <EditText 
+            android:id="@+id/etHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Goal Weight"/>
-        <EditText android:id="@+id/etGWeight"/>
+        <TextView 
+            android:id="@+id/tvGWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal Weight"/>
+        <EditText 
+            android:id="@+id/etGWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Age"/>
-        <EditText android:id="@+id/etAge"/>
+        <TextView 
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"/>
+        <EditText 
+            android:id="@+id/etAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Phone"/>
-        <EditText android:id="@+id/etPhone"/>
+        <TextView 
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"/>
+        <EditText 
+            android:id="@+id/etPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="Address"/>
-        <EditText android:id="@+id/etAddress"/>
+        <TextView 
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"/>
+        <EditText 
+            android:id="@+id/etAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </TableRow>
 
     <TableRow>
         <CheckBox
             android:id="@+id/cbTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Accept Terms"/>
     </TableRow>
 
     <TableRow>
         <Button
             android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Submit"/>
     </TableRow>
 
@@ -3803,7 +4355,12 @@ public class MainActivity extends AppCompatActivity {
     android:padding="16dp"
     android:orientation="vertical">
 
-    <TextView android:id="@+id/tvResult" android:textSize="16sp"/>
+    <TextView 
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp"/>
 
 </LinearLayout>
 </ScrollView>
@@ -3843,17 +4400,40 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-#### 📄 `Manifest.xml` (addition)
+#### 📄 `AndroidManifest.xml`
 
 ```xml
-<activity android:name=".SecondActivity"/>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practice">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"/>
+    </application>
+
+</manifest>
 ```
 
 ---
 
----
-
-## Slip 20
+<h2 align="center" id="slip-20"><b> Slip 20 </b></h2>
 
 ### Q1. Create Android Program to Change the Image on the Screen. [10 Marks]
 
@@ -3980,4 +4560,22 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
-*End of Android Programming Slips (01–20)*
+<h2 align="center"  margin-top: 30px; font-weight: 600;">👤 Author: Sanchet Kolekar</h2>
+
+<div align="center">
+  <a href="https://github.com/Sanchet237">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/sanchet-kolekar-613916331/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://www.instagram.com/sanchetkolekar">
+    <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+  <a href="https://x.com/Sanchet_237">
+    <img src="https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white" />
+  </a>
+  <a href="mailto:sanchetkolekar.07@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</div>
