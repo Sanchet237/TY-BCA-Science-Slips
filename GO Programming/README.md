@@ -1,6 +1,8 @@
-﻿<h1 align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png?_=20191207190041"  width="80" height="30"/> 
-   Go Programming Slips 
-</strong><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png?_=20191207190041"  width="80" height="30"/> </h1>
+﻿<h1 align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png?_=20191207190041" width="80" height="30"/>
+  Go Programming & IOT Slips
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png?_=20191207190041" width="80" height="30"/>
+</h1>
 
 <h3 align="center"><b>Savitribai Phule Pune University</b></h3>
 <div align="center" style="margin: 15px 0;">
@@ -10,7 +12,7 @@
 <p align="center">
   T.Y. B.C.A. (Science) <br>
   Semester VI - Practical Examination<br>
-  <b>Go Programming & IOT Lab</b>
+  <b>BCA 367: DSE V Lab (Programming in GO and IoT)</b>
 </p>
 
 <p align="center">
