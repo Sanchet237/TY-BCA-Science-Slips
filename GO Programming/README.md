@@ -661,6 +661,7 @@ The LED connected to digital pin 10 successfully blinked with a 1-second ON and 
 
 **Conclusion:**
 The experiment demonstrates the basic digital output operation of the Arduino Uno using the `pinMode()` and `digitalWrite()` functions. By controlling the HIGH and LOW states of a digital pin, an LED can be switched ON and OFF. This concept forms the foundation for controlling other electronic components such as buzzers, relays, motors, and sensors in embedded and IoT applications.
+
 ---
 
 ---
