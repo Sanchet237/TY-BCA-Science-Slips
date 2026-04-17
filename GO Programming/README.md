@@ -54,7 +54,7 @@
 
 <h2 align="center" id="slip-01"><b> Slip 01 </b></h2>
 
-### Q1. Write a program in GO language to accept user choice and print answers using arithmetic operators. [10 Marks]
+### Q1. Write a program in GO language to accept user choice and print answers using arithmetic operators. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -183,7 +183,7 @@ The experiment demonstrates the basic digital output operation of the Arduino Un
 
 <h2 align="center" id="slip-02"><b> Slip 02 </b></h2>
 
-### Q1. Write a program in GO language to print Fibonacci series of n terms. [10 Marks]
+### Q1. Write a program in GO language to print Fibonacci series of n terms. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -290,7 +290,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-03"><b> Slip 03 </b></h2>
 
-### Q1. Write a program in the GO language using function to check whether accepted number is palindrome or not. [10 Marks]
+### Q1. Write a program in the GO language using function to check whether accepted number is palindrome or not. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -421,7 +421,7 @@ The experiment demonstrates the basic digital output operation of the Arduino Un
 
 <h2 align="center" id="slip-04"><b> Slip 04 </b></h2>
 
-### Q1. Write a program in GO language to print a recursive sum of digits of a given number. [10 Marks]
+### Q1. Write a program in GO language to print a recursive sum of digits of a given number. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -539,7 +539,7 @@ controlled. This concept forms a basic foundation for many embedded systems and 
 
 <h2 align="center" id="slip-05"><b> Slip 05 </b></h2>
 
-### Q1. Write a program in GO language to create a Text file and write some text into it. [10 Marks]
+### Q1. Write a program in GO language to create a Text file and write some text into it. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -668,7 +668,7 @@ The experiment demonstrates the basic digital output operation of the Arduino Un
 
 <h2 align="center" id="slip-06"><b> Slip 06 </b></h2>
 
-### Q1. Write a program in GO language to accept two matrices and display its multiplication. [10 Marks]
+### Q1. Write a program in GO language to accept two matrices and display its multiplication. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -827,7 +827,7 @@ controlled. This concept forms a basic foundation for many embedded systems and 
 
 <h2 align="center" id="slip-07"><b> Slip 07 </b></h2>
 
-### Q1. Write a program in GO language to accept one matrix and display its transpose. [10 Marks]
+### Q1. Write a program in GO language to accept one matrix and display its transpose. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -957,7 +957,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-08"><b> Slip 08 </b></h2>
 
-### Q1. Write a program in GO language to accept the book details such as BookID, Title, Author, Price. Read and display the details of 'n' number of books. [10 Marks]
+### Q1. Write a program in GO language to accept the book details such as BookID, Title, Author, Price. Read and display the details of 'n' number of books. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1113,7 +1113,7 @@ The experiment demonstrates the basic digital output operation of the Arduino Un
 
 <h2 align="center" id="slip-09"><b> Slip 09 </b></h2>
 
-### Q1. Write a program in the GO language using function to check whether accepted number is palindrome or not. [10 Marks]
+### Q1. Write a program in the GO language using function to check whether accepted number is palindrome or not. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1253,7 +1253,7 @@ The experiment demonstrates the basic digital output operation of the Arduino Un
 
 <h2 align="center" id="slip-10"><b> Slip 10 </b></h2>
 
-### Q1. Write a program in GO language to create an interface and display its values with the help of type assertion. [10 Marks]
+### Q1. Write a program in GO language to create an interface and display its values with the help of type assertion. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1359,7 +1359,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-11"><b> Slip 11 </b></h2>
 
-### Q1. Write a program in GO language to check whether the accepted number is two digit or not. [10 Marks]
+### Q1. Write a program in GO language to check whether the accepted number is two digit or not. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1465,7 +1465,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-12"><b> Slip 12 </b></h2>
 
-### Q1. Write a program in GO language to swap two numbers using call by reference concept. [10 Marks]
+### Q1. Write a program in GO language to swap two numbers using call by reference concept. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1591,7 +1591,7 @@ controlled. This concept forms a basic foundation for many embedded systems and 
 
 <h2 align="center" id="slip-13"><b> Slip 13 </b></h2>
 
-### Q1. Write a program in GO language to print sum of all even and odd numbers separately between 1 to 100. [10 Marks]
+### Q1. Write a program in GO language to print sum of all even and odd numbers separately between 1 to 100. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1707,7 +1707,7 @@ controlled. This concept forms a basic foundation for many embedded systems and 
 
 <h2 align="center" id="slip-14"><b> Slip 14 </b></h2>
 
-### Q1. Write a program in GO language to demonstrate working of slices (like append, remove, copy etc.) [10 Marks]
+### Q1. Write a program in GO language to demonstrate working of slices (like append, remove, copy etc.) [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1847,7 +1847,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-15"><b> Slip 15 </b></h2>
 
-### Q1. Write a program in GO language to demonstrate function return multiple values. [10 Marks]
+### Q1. Write a program in GO language to demonstrate function return multiple values. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -1984,7 +1984,7 @@ controlled. This concept forms a basic foundation for many embedded systems and 
 
 <h2 align="center" id="slip-16"><b> Slip 16 </b></h2>
 
-### Q1. Write a program in GO language to create a user defined package to find out the area of a rectangle. [10 Marks]
+### Q1. Write a program in GO language to create a user defined package to find out the area of a rectangle. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -2089,7 +2089,7 @@ The experiment demonstrates the basic digital output operation of the Arduino Un
 
 <h2 align="center" id="slip-17"><b> Slip 17 </b></h2>
 
-### Q1. Write a program in GO language to illustrate the function returning multiple values. (Add, Subtract, Multiply, Divide) [10 Marks]
+### Q1. Write a program in GO language to illustrate the function returning multiple values. (Add, Subtract, Multiply, Divide) [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -2206,7 +2206,7 @@ controlled. This concept forms a basic foundation for many embedded systems and 
 
 <h2 align="center" id="slip-18"><b> Slip 18 </b></h2>
 
-### Q1. Write a program in GO language to print a multiplication table of number using function. [10 Marks]
+### Q1. Write a program in GO language to print a multiplication table of number using function. [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -2326,7 +2326,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-19"><b> Slip 19 </b></h2>
 
-### Q1. Write a program in GO language to illustrate the function returning multiple values (add, subtract). [10 Marks]
+### Q1. Write a program in GO language to illustrate the function returning multiple values (add, subtract). [20 Marks]
 
 #### ⚙️ `main.go`
 
@@ -2427,7 +2427,7 @@ This experiment demonstrates how the Arduino Uno can control an output device su
 
 <h2 align="center" id="slip-20"><b> Slip 20 </b></h2>
 
-### Q1. Write a program in Go language to add or append content at the end of a text file. [10 Marks]
+### Q1. Write a program in Go language to add or append content at the end of a text file. [20 Marks]
 
 #### ⚙️ `main.go`
 
