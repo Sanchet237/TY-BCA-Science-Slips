@@ -1,7 +1,9 @@
 ﻿<h1 align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png?_=20191207190041" width="80" height="30"/>
-  Go Programming & IOT Slips
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png?_=20191207190041" width="80" height="30"/>
+  <span style="display: inline-flex; align-items: center; gap: 12px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png" width="60"/>
+    <span>Go Programming & IOT Slips</span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png" width="60"/>
+  </span>
 </h1>
 
 <h3 align="center"><b>Savitribai Phule Pune University</b></h3>
